@@ -1,4 +1,5 @@
 package io.github.edsonzucchi.springkotlinkafka
 
-class Constants {
-}
+const val EXAMPLE_TOPIC_NAME = "someTopicOne"
+
+const val GROUP_ID = "groupId"
