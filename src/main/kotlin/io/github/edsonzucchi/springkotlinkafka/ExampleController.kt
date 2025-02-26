@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.ResponseStatus
 import org.springframework.web.bind.annotation.RestController
+import kotlin.random.Random
 
 @RestController
 class ExampleController(
@@ -15,6 +16,6 @@ class ExampleController(
     @PostMapping("/test")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     fun sendTestMessage(@RequestParam("message") message: String) {
-        exampleStringProducer.sendStringMessage(message)
+        exampleStringProducer.sendClass(DataClass(Random.nextLong(0, 100), message))
     }
 }
